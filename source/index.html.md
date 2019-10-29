@@ -12,6 +12,7 @@ includes:
   - auth
   - universe
   - galaxies
+  - empires
   - errors
 
 search: true
