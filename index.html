@@ -252,6 +252,14 @@
               </ul>
           </li>
           <li>
+            <a href="#empires" class="toc-h1 toc-link" data-title="Empires">Empires</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-a-specific-empire" class="toc-h2 toc-link" data-title="Get a Specific Empire">Get a Specific Empire</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -310,7 +318,7 @@ Make sure to replace <code>API_AUTH_TOKEN</code> with an actual token.
 </aside>
 <h1 id='universe'>Universe</h1><h2 id='get-universe'>Get Universe</h2>
 <p>This endpoint retrieves information about the Imperial Conflict universe.</p>
-<h3 id='http-request-2'>HTTP Request</h3>
+<h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.imperialconflict.com/universe</code></p>
 <pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.imperialconflict.com/universe "</span>
   -H <span class="s2">"Authorization: Bearer API_AUTH_TOKEN"</span>
@@ -366,7 +374,7 @@ Make sure to replace <code>API_AUTH_TOKEN</code> with an actual token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h1 id='galaxies'>Galaxies</h1><h2 id='get-all-galaxies'>Get All Galaxies</h2>
 <p>This endpoint retrieves all galaxies.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
+<h3 id='http-request'>HTTP Request</h3>
 <p><code>GET https://api.imperialconflict.com/galaxies</code></p>
 <h3 id='url-parameters'>URL Parameters</h3>
 <table><thead>
@@ -437,7 +445,7 @@ Make sure to replace <code>API_AUTH_TOKEN</code> with an actual token.
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h2 id='get-a-specific-galaxy'>Get a Specific Galaxy</h2>
 <p>This endpoint retrieves a specific galaxy.</p>
-<h3 id='http-request-4'>HTTP Request</h3>
+<h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET https://api.imperialconflict.com/galaxies/&lt;slug&gt;</code></p>
 <h3 id='url-parameters-2'>URL Parameters</h3>
 <table><thead>
@@ -468,6 +476,80 @@ Make sure to replace <code>API_AUTH_TOKEN</code> with an actual token.
       </span><span class="s2">"official"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre><h1 id='empires'>Empires</h1><h2 id='get-a-specific-empire'>Get a Specific Empire</h2>
+<p>This endpoint retrieves a specific empire.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://api.imperialconflict.com/empires/id</code></p>
+<h3 id='url-parameters'>URL Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ID</td>
+<td>The Empire ID</td>
+</tr>
+</tbody></table>
+<pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.imperialconflict.com/empires/383727"</span>
+  -H <span class="s2">"Authorization: Bearer API_AUTH_TOKEN"</span>
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"empires"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"383727"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">102051</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"fearl3ss"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"ruler"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dron3s"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"banner_filename"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"family_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4291</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"family_role_type_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"population"</span><span class="p">:</span><span class="w"> </span><span class="mi">743553</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"planets_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">85</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"networth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1149234</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"home_planet_coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"x"</span><span class="p">:</span><span class="w"> </span><span class="mi">72</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"y"</span><span class="p">:</span><span class="w"> </span><span class="mi">91</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"number"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="s2">"relationships"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"round"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rounds"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="s2">"race"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"races"</span><span class="p">,</span><span class="w">
+          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"621562"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="s2">"included"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rounds"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"23"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Milky Way 56"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"races"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"621562"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CFO"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre><h1 id='errors'>Errors</h1>
 <p>The Imperial Conflict API uses the following error codes:</p>
